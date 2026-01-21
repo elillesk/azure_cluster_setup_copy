@@ -17,7 +17,6 @@ Autoscale = $Autoscale
     Region = $Region
     KeyPairLocation = ~/.ssh/cyclecloud.pem
 	Azure.Identities = /subscriptions/4334cd1d-26f7-4e96-aed0-806c60519a30/resourceGroups/uwradcos_tools/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uwradcos_id
-    Azure.Identities = $ManagedIdentity
     Tags = $NodeTags
 
     # Lustre mounts require termination notifications to unmount
