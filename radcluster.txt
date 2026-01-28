@@ -71,7 +71,7 @@ Autoscale = $Autoscale
 
         [[[cluster-init cyclecloud/healthagent:default]]]
         [[[cluster-init cyclecloud/monitoring:default]]]
-        [[[cluster-init cyclecloud/slurm:default:4.0.5]]]
+        [[[cluster-init cyclecloud/slurm:default:4.0.4]]]
 
 		[[[cluster-init radcos:default:1.0.0]]]
 
@@ -128,7 +128,7 @@ Autoscale = $Autoscale
 
         [[[cluster-init cyclecloud/healthagent:default]]]
         [[[cluster-init cyclecloud/monitoring:default]]]
-        [[[cluster-init cyclecloud/slurm:scheduler:4.0.5]]]
+        [[[cluster-init cyclecloud/slurm:scheduler:4.0.4]]]
 		[[[cluster-init radcos:default:1.0.0]]]
 
         [[[network-interface eth0]]]
@@ -194,7 +194,7 @@ Autoscale = $Autoscale
 
         [[[cluster-init cyclecloud/healthagent:default]]]
         [[[cluster-init cyclecloud/monitoring:default]]]
-        [[[cluster-init cyclecloud/slurm:login:4.0.5]]]
+        [[[cluster-init cyclecloud/slurm:login:4.0.4]]]
 
 		[[[cluster-init radcos:default:1.0.0]]]
 
@@ -215,7 +215,7 @@ Autoscale = $Autoscale
 
         [[[cluster-init cyclecloud/healthagent:default]]]
         [[[cluster-init cyclecloud/monitoring:default]]]
-        [[[cluster-init cyclecloud/slurm:execute:4.0.5]]]
+        [[[cluster-init cyclecloud/slurm:execute:4.0.4]]]
 
 		[[[cluster-init radcos:default:1.0.0]]]
 
