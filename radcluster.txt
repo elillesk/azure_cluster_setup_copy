@@ -16,7 +16,7 @@ Autoscale = $Autoscale
     SubnetId = $SubnetId
     Region = $Region
     KeyPairLocation = ~/.ssh/cyclecloud.pem
-	Azure.Identities = /subscriptions/4334cd1d-26f7-4e96-aed0-806c60519a30/resourceGroups/uwradcos_tools/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uwradcos_id
+	Azure.Identities = /subscriptions/4560f184-9d4a-4673-a34d-8640f23b9a34/resourcegroups/cluster_resources2026/providers/Microsoft.ManagedIdentity/userAssignedIdentities/locker_id_2026
     Tags = $NodeTags
 
     # Lustre mounts require termination notifications to unmount
@@ -131,8 +131,9 @@ Autoscale = $Autoscale
         [[[cluster-init cyclecloud/slurm:scheduler:4.0.4]]]
 		[[[cluster-init radcos:default:1.0.0]]]
 
-        [[[network-interface eth0]]]
-        AssociatePublicIpAddress = $UsePublicNetwork
+        
+	[[[network-interface eth0]]]
+	PublicIp = /subscriptions/4560f184-9d4a-4673-a34d-8640f23b9a34/resourceGroups/cluster_resources2026/providers/Microsoft.Network/publicIPAddresses/cluster_public_ip
 
         [[[volume sched]]]
         Size = $SchedFilesystemSize
@@ -206,6 +207,9 @@ Autoscale = $Autoscale
 
     [[node nodearraybase]]
     Abstract = true
+    CloudInit = '''#!/bin/bash
+    sudo apt-get update
+    '''
         [[[configuration]]]
         slurm.role = execute
         slurm.autoscale = true
@@ -729,8 +733,8 @@ Order = 20
         Label = Managed Id
         Description = Optionally assign an Azure user assigned managed identity to all nodes to access Azure resources using assigned roles.
         ParameterType = Azure.ManagedIdentity
-        DefaultValue = =undefined
-
+        DefaultValue = /subscriptions/4560f184-9d4a-4673-a34d-8640f23b9a34/resourcegroups/cluster_resources2026/providers/Microsoft.ManagedIdentity/userAssignedIdentities/locker_id_2026
+ 
         [[[parameter BootDiskSize]]]
         Description = Optional: Size of the OS/boot disk in GB for all nodes in the cluster (leave at 0 to use Image size)
         ParameterType = Integer
