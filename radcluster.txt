@@ -82,7 +82,7 @@ Autoscale = $Autoscale
         [[[configuration cyclecloud.mounts.nfs_shared]]]
         type = $NFSType
         mountpoint = /shared
-        export_path = ${ifThenElse(NFSType == "lustre", strcat("tcp:/lustrefs", NFSSharedExportPath), NFSSharedExportPath)}
+        export_path = $NFSSharedExportPath
         address = $NFSAddress
         options = $NFSSharedMountOptions
 
