@@ -82,7 +82,7 @@ Autoscale = $Autoscale
         [[[configuration cyclecloud.mounts.nfs_shared]]]
         type = $NFSType
         mountpoint = /shared
-        export_path = $NFSSharedExportPath
+        export_path = ${ifThenElse(NFSType == "lustre", strcat("tcp:/lustrefs", NFSSharedExportPath), NFSSharedExportPath)}
         address = $NFSAddress
         options = $NFSSharedMountOptions
 
@@ -131,8 +131,7 @@ Autoscale = $Autoscale
         [[[cluster-init cyclecloud/slurm:scheduler:4.0.4]]]
 		[[[cluster-init radcos:default:1.0.0]]]
 
-        
-	[[[network-interface eth0]]]
+        [[[network-interface eth0]]]
 	PublicIp = /subscriptions/4560f184-9d4a-4673-a34d-8640f23b9a34/resourceGroups/cluster_resources2026/providers/Microsoft.Network/publicIPAddresses/cluster_public_ip
 
         [[[volume sched]]]
@@ -207,9 +206,6 @@ Autoscale = $Autoscale
 
     [[node nodearraybase]]
     Abstract = true
-    CloudInit = '''#!/bin/bash
-    sudo apt-get update
-    '''
         [[[configuration]]]
         slurm.role = execute
         slurm.autoscale = true
@@ -733,8 +729,8 @@ Order = 20
         Label = Managed Id
         Description = Optionally assign an Azure user assigned managed identity to all nodes to access Azure resources using assigned roles.
         ParameterType = Azure.ManagedIdentity
-        DefaultValue = /subscriptions/4560f184-9d4a-4673-a34d-8640f23b9a34/resourcegroups/cluster_resources2026/providers/Microsoft.ManagedIdentity/userAssignedIdentities/locker_id_2026
- 
+        DefaultValue = =undefined
+
         [[[parameter BootDiskSize]]]
         Description = Optional: Size of the OS/boot disk in GB for all nodes in the cluster (leave at 0 to use Image size)
         ParameterType = Integer
