@@ -33,7 +33,7 @@
   "ExecuteNodesPublic" : false,
   "additional_slurm_config" : null,
   "SubnetId" : "cluster_resources2026/new_net/cyclecloud_cluster",
-  "FilesystemSize" : 100,
+  "FilesystemSize" : 0,
   "AdditionalNFSMountPoint" : "/data",
   "NodeNameIsHostname" : true,
   "configuration_slurm_shutdown_policy" : "Terminate",
@@ -53,5 +53,12 @@
   "DynamicImageName" : "cycle.image.ubuntu22",
   "DynamicSpotMaxPrice" : -1,
   "HTCClusterInitSpecs" : null,
-  "HPCMaxScalesetSize" : 100
+  "HPCMaxScalesetSize" : 100,
+  "UseBuiltinShared" : false,
+  "SchedFilesystemSize" : 0,
+  "UseBuiltinSched" : false,
+  "NFSSchedType" : "nfs",
+  "NFSSchedAddress" : "radnfs.file.core.windows.net",
+  "NFSSchedExportPath" : "/radnfs/sched",
+  "NFSSharedType" : "nfs"
 }
