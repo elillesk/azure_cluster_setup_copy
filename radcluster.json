@@ -22,7 +22,7 @@
   "NodeNamePrefix" : "Cluster Prefix",
   "Credentials" : "uwccloud",
   "Autoscale" : true,
-  "NFSAddress" : "radnfs.file.core.windows.net",
+  "NFSAddress" : "radcosnfs.file.core.windows.net",
   "slurm" : null,
   "MaxDynamicExecuteCoreCount" : 100,
   "configuration_slurm_accounting_url" : null,
@@ -44,7 +44,7 @@
   "About sched" : null,
   "ReturnProxy" : false,
   "HTCSpotMaxPrice" : -1,
-  "NFSSharedExportPath" : "/radnfs/shared",
+  "NFSSharedExportPath" : "/radcosnfs/shared",
   "AdditonalNFSAddress" : null,
   "configuration_slurm_ha_enabled" : false,
   "HTCUseLowPrio" : false,
@@ -55,10 +55,5 @@
   "HTCClusterInitSpecs" : null,
   "HPCMaxScalesetSize" : 100,
   "UseBuiltinShared" : false,
-  "SchedFilesystemSize" : 0,
-  "UseBuiltinSched" : false,
-  "NFSSchedType" : "nfs",
-  "NFSSchedAddress" : "radnfs.file.core.windows.net",
-  "NFSSchedExportPath" : "/radnfs/sched",
   "NFSSharedType" : "nfs"
 }
