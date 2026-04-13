@@ -132,7 +132,7 @@ Autoscale = $Autoscale
 		[[[cluster-init radcos:default:1.0.0]]]
 
         [[[network-interface eth0]]]
-	PublicIp = /subscriptions/4560f184-9d4a-4673-a34d-8640f23b9a34/resourceGroups/cluster_resources2026/providers/Microsoft.Network/publicIPAddresses/cluster_public_ip
+	PublicIp = /subscriptions/4334cd1d-26f7-4e96-aed0-806c60519a30/resourceGroups/network_resources/providers/Microsoft.Network/publicIPAddresses/cluster_public_ip
 
         [[[volume sched]]]
         Size = $SchedFilesystemSize
