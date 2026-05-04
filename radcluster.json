@@ -28,7 +28,7 @@
   "configuration_slurm_accounting_url" : null,
   "NFSType" : "nfs",
   "SchedulerHostName" : "Cluster Prefix",
-  "HTCMachineType" : "Standard_F32als_v6",
+  "HTCMachineType" : "Standard_F32s_v2",
   "HPCMachineType" : "Standard_E48s_v3",
   "ExecuteNodesPublic" : false,
   "additional_slurm_config" : null,
