@@ -8,7 +8,7 @@
   "configuration_slurm_accounting_password" : null,
   "Region" : "westus",
   "Additional NFS Mount Readme" : null,
-  "MaxHPCExecuteCoreCount" : 350,
+  "MaxHPCExecuteCoreCount" : 768,
   "NumberLoginNodes" : 0,
   "HTCImageName" : "cycle.image.ubuntu22",
   "MaxHTCExecuteCoreCount" : 350,
